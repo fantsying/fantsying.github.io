@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>花叶</title>
+    <style>
+        #box{
+            width: 800px;
+            background-color: lightgoldenrodyellow;
+            font-size: 14px;
+            color: black;
+            margin: auto;
+            border: 5px solid cadetblue;
+            border-radius: 20px;
+            box-shadow: cadetblue;
+        ;
+
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        h3{
+            margin-left: 10px;
+        }
+        p{
+            margin-left: 20px;
+            text-indent: 2em;
+        }
+    </style>
+
+</head>
+<body>
+<h1>20170111学习总结</h1>
+<div id="box">
+    <h2>函数原型及原型链</h2>
+    <h3>一、构造函数</h3>
+    <p>可以简单理解为new关键字后面的函数</p>
+    <pre>
+        function person(){
+            }
+            var student = new person();   //构造函数
+    </pre>
+        <p>特点：1、用new关键字调用<br>2、函数内部可以使用this关键字<br>
+        this只想的是构造出的新对象，直接将属性和方法赋给this<br>
+        通过构造函数创建的每个对象，都将拥有一份实例属性的单独拷贝<br>
+        3、默认不用return返回值，默认会返回this，也就是新的实例对象<br>
+        return返回Object类型时，返回的不是this，所有值类型均返回this</p>
+
+    <h3>构造函数拥有一个prototype属性，指向原型</h3>
+        <p>1、可以通过原型来创建属性和方法</p>
+        <p>通过原型创建的属性和方法是被所有实例所共享的</p>
+        <p>也就是在一个实例中修改了该属性或方法的值，所有其他实例的属性或方法值都会受到影响</p>
+        <p>2、用构造函数创建一个实例时，实例的内部也包含了一个指针，指向构造函数的原型对象<br>
+        一些浏览器支持一个属性_proto_来表示这个内部指针</p>
+
+
+</div>
+
+</body>
+</html>
