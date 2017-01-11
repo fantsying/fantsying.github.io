@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>花叶</title>
+    <style>
+        #box{
+            width: 800px;
+            background-color: lightgoldenrodyellow;
+            font-size: 14px;
+            color: black;
+            margin: auto;
+            border: 5px solid cadetblue;
+            border-radius: 20px;
+            box-shadow: cadetblue;
+        ;
+
+        }
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+        }
+        h3{
+            margin-left: 10px;
+        }
+        p{
+            margin-left: 20px;
+            text-indent: 2em;
+        }
+    </style>
+
+</head>
+<body>
+<h1>20170110学习总结</h1>
+<div id="box">
+    <h2>一、声明</h2>
+    <p>1、变量声明（var） 2、常量声明（const）</p>
+
+    <h2>二、函数</h2>
+    <p>函数是一等公民，函数式声明会被提前</p>
+    <pre>
+        //函数声明式声明
+        function dome(a,b){
+            console.log(a+b);
+        }
+        dome(a,b)  //调用函数，如果a=5,b=10,则a+b输出是15
+
+
+        //表达式声明
+        var foo=function(){
+            }
+
+        //匿名声明
+        （function（）{
+            })();
+
+        //动态声明
+        var fun=new Function("a=1","b=2","return a+b");
+    </pre>
+
+    <h2>三、DOM和BOM</h2>
+    <p>DOM是指Document Object Model，一般所说的DOM指的是Html Dom也就是W3C的DOM</p>
+    <p>BOM是指Browser，各个浏览器不一，是Window对象，约等于类</p>
+
+    <h2>四、闭包</h2>
+    <p>闭包指能访问函数内部声明的变量的函数</p>
+
+    <h2>五、this</h2>
+    <p>1、this指向标签</p>
+    <p>2、this指向Window</p>
+    <pre>
+        function foo(){
+            console.log(this);
+            }
+        foo();  //指向Window
+    </pre>
+
+
+
+
+
+</div>
+
+</body>
+</html>
